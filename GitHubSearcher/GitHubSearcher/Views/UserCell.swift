@@ -27,20 +27,18 @@ class UserCell: UITableViewCell {
         self.contentView.addSubview(avatarImageView)
         self.contentView.addSubview(usernameLabel)
         self.contentView.addSubview(repoCountLabel)
-        usernameLabel.text = "This is sample text"
-        repoCountLabel.text = "Repos: 80"
         
         let padding: CGFloat = 8
         NSLayoutConstraint.activate([
             avatarImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             avatarImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
             avatarImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding),
-            avatarImageView.heightAnchor.constraint(equalTo: avatarImageView.heightAnchor),
+            avatarImageView.heightAnchor.constraint(equalTo: avatarImageView.widthAnchor),
+            avatarImageView.widthAnchor.constraint(equalToConstant: 100.0),
             
             repoCountLabel.topAnchor.constraint(equalTo: avatarImageView.topAnchor),
             repoCountLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
             repoCountLabel.bottomAnchor.constraint(equalTo: avatarImageView.bottomAnchor),
-            repoCountLabel.widthAnchor.constraint(equalTo: avatarImageView.widthAnchor),
             
             usernameLabel.topAnchor.constraint(lessThanOrEqualTo: avatarImageView.topAnchor),
             usernameLabel.bottomAnchor.constraint(lessThanOrEqualTo: avatarImageView.bottomAnchor),

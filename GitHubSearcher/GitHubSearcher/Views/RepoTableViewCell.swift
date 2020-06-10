@@ -10,7 +10,6 @@ import UIKit
 
 class RepoTableViewCell: UITableViewCell {
 
-    
     let repoNameLabel = UsernameLabel(frame: .zero)
     let forkslabel = UsernameLabel(frame: .zero)
     let starslabel = UsernameLabel(frame: .zero)
@@ -47,6 +46,7 @@ class RepoTableViewCell: UITableViewCell {
             
             starslabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 10),
             starslabel.topAnchor.constraint(equalTo: forkslabel.bottomAnchor),
+            starslabel.widthAnchor.constraint(equalTo: forkslabel.widthAnchor),
             starslabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
         

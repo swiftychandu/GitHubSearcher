@@ -13,3 +13,10 @@ extension UIViewController {
       views.forEach(view.addSubview)
     }
 }
+
+extension UITableView {
+    func dequeue<T: UITableViewCell>(type: T.Type, reuseId: String, indexPath: IndexPath) -> T {
+        return self.dequeueReusableCell(withIdentifier: reuseId, for: indexPath) as! T
+    }
+    
+}

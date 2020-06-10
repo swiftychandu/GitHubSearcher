@@ -12,12 +12,25 @@ class UserInfoViewController: UIViewController {
 
     let headerView = UIView()
     let footerView = UIView()
+    let userDetails: UserDetails
+    let repos: [Repo]
+    
+    
+    init(userDetails: UserDetails, repos: [Repo]) {
+        self.userDetails = userDetails
+        self.repos = repos
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        add(childVC: UserInfoHeaderVC(), to: headerView)
-        add(childVC: RepoTableViewController(), to: footerView)
+        add(childVC: UserInfoHeaderVC(userDetails: self.userDetails, repos: self.repos), to: headerView)
+        add(childVC: RepoTableViewController(repos: self.repos), to: footerView)
     }
     
     private func setupUI() {

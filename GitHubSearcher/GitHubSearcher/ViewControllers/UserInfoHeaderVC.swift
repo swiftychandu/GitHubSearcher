@@ -18,43 +18,46 @@ class UserInfoHeaderVC: UIViewController {
     let followingLabel = UsernameLabel()
     let bioLabel = BodyLabel()
     let footerView = UIView()
-//    var user: User!
-        
-//    init(user: User) {
-//        super.init(nibName: nil, bundle: nil)
-//        self.user = user
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    let userDetails: UserDetails
+    let repos: [Repo]
+    
+    
+    init(userDetails: UserDetails, repos: [Repo]) {
+        self.userDetails = userDetails
+        self.repos = repos
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        add(childVC: UINavigationController(rootViewController: RepoTableViewController()), to: footerView)
+        add(childVC: UINavigationController(rootViewController: RepoTableViewController(repos: self.repos)), to: footerView)
     }
     
     func add(childVC: UIViewController, to containerView: UIView) {
-           addChild(childVC)
-           containerView.addSubview(childVC.view)
-           childVC.view.frame = containerView.bounds
-           childVC.didMove(toParent: self)
-       }
+        addChild(childVC)
+        containerView.addSubview(childVC.view)
+        childVC.view.frame = containerView.bounds
+        childVC.didMove(toParent: self)
+    }
     
     private func setupUI() {
     addSubviews(views: avatartImageView,usernameLabel,emailLabel,locationLabel,
                 joinDateLabel,followerslabel,followingLabel,bioLabel,footerView)
         footerView.translatesAutoresizingMaskIntoConstraints = false
-        usernameLabel.text = "This is Username Label"
-        emailLabel.text = "This is Email Label"
-        locationLabel.text = "This is Location Label"
-        joinDateLabel.text = "This is Join Date Label"
-        followerslabel.text = "This is Followers Label"
-        followingLabel.text = "This is Following Label"
-        bioLabel.text = "This is Bio Label"
-       
+        usernameLabel.text = userDetails.login
+        emailLabel.text = userDetails.email
+        locationLabel.text = userDetails.location
+        joinDateLabel.text = userDetails.joinDate
+        followerslabel.text = "\(userDetails.followers) Followers"
+        followingLabel.text = "Following \(userDetails.following)"
+        bioLabel.text = userDetails.bio
         
+       
         let padding: CGFloat = 5
         let height: CGFloat = 30
         NSLayoutConstraint.activate([
@@ -102,7 +105,6 @@ class UserInfoHeaderVC: UIViewController {
         footerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
         footerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         footerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-        
         
         ])
         
