@@ -11,7 +11,7 @@ import Foundation
 class NetworkService {
     let searchUrl = "https://api.github.com/search/users?q="
     
-    func fetchUsers(for query: String, completion: @escaping (Result<[User], GHError>) -> Void) {
+    func fetchUsers(for query: String, completion: @escaping (Result<SearchData, GHError>) -> Void) {
         let endPoint = searchUrl + query
         print("End Point: \(endPoint)")
         guard let url = URL(string: endPoint) else { completion(.failure(.nousers)); return }
@@ -26,7 +26,7 @@ class NetworkService {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let users = try decoder.decode([User].self, from: data)
+                let users = try decoder.decode(SearchData.self, from: data)
                 completion(.success(users))
             } catch {
                 completion(.failure(.invalidData))

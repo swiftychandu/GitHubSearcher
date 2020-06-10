@@ -22,7 +22,7 @@ class UsernameLabel: UILabel {
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
         textAlignment = .left
-        textColor = .label
+        textColor = .systemRed
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.90
         lineBreakMode = .byTruncatingTail

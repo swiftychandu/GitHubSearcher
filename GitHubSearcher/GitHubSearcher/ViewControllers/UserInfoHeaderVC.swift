@@ -17,11 +17,71 @@ class UserInfoHeaderVC: UIViewController {
     let followerslabel = UsernameLabel()
     let followingLabel = UsernameLabel()
     let bioLabel = BodyLabel()
-    
+    var user: User!
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupUI()
+    }
+    
+    private func setupUI() {
+    addSubviews(views: avatartImageView,usernameLabel,emailLabel,locationLabel,
+                joinDateLabel,followerslabel,followingLabel,bioLabel)
+        usernameLabel.text = "This is Username Label"
+        emailLabel.text = "This is Email Label"
+        locationLabel.text = "This is Email Label"
+        joinDateLabel.text = "This is Join Data Label"
+        followerslabel.text = "This is Followers Label"
+        followingLabel.text = "This is Following Label"
+        bioLabel.text = "This is Bio Label"
+       
+        
+        let padding: CGFloat = 5
+        let height: CGFloat = 30
+        NSLayoutConstraint.activate([
+        avatartImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+        avatartImageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+        avatartImageView.heightAnchor.constraint(equalToConstant: 120),
+        avatartImageView.widthAnchor.constraint(equalToConstant: 140),
+        
+        usernameLabel.leadingAnchor.constraint(equalTo: avatartImageView.trailingAnchor, constant: 2 * padding),
+        usernameLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -padding),
+        usernameLabel.topAnchor.constraint(equalTo: avatartImageView.topAnchor),
+        usernameLabel.heightAnchor.constraint(equalToConstant: height),
+        
+        emailLabel.leadingAnchor.constraint(equalTo: usernameLabel.leadingAnchor),
+        emailLabel.trailingAnchor.constraint(equalTo: usernameLabel.trailingAnchor),
+        emailLabel.topAnchor.constraint(equalTo: usernameLabel.bottomAnchor, constant: padding),
+        emailLabel.heightAnchor.constraint(equalToConstant: height),
+        
+        locationLabel.leadingAnchor.constraint(equalTo: emailLabel.leadingAnchor),
+        locationLabel.trailingAnchor.constraint(equalTo: emailLabel.trailingAnchor),
+        locationLabel.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: padding),
+        locationLabel.heightAnchor.constraint(equalToConstant: height),
+        
+        joinDateLabel.leadingAnchor.constraint(equalTo: locationLabel.leadingAnchor),
+        joinDateLabel.trailingAnchor.constraint(equalTo: locationLabel.trailingAnchor),
+        joinDateLabel.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: padding),
+        joinDateLabel.heightAnchor.constraint(equalToConstant: height),
+        
+        followerslabel.leadingAnchor.constraint(equalTo: joinDateLabel.leadingAnchor),
+        followerslabel.trailingAnchor.constraint(equalTo: joinDateLabel.trailingAnchor),
+        followerslabel.topAnchor.constraint(equalTo: joinDateLabel.bottomAnchor, constant: padding),
+        followerslabel.heightAnchor.constraint(equalToConstant: height),
+        
+        followingLabel.leadingAnchor.constraint(equalTo: followerslabel.leadingAnchor),
+        followingLabel.trailingAnchor.constraint(equalTo: followerslabel.trailingAnchor),
+        followingLabel.topAnchor.constraint(equalTo: followerslabel.bottomAnchor, constant: padding),
+        followingLabel.heightAnchor.constraint(equalToConstant: height),
+        
+        bioLabel.leadingAnchor.constraint(equalTo: avatartImageView.leadingAnchor),
+        bioLabel.topAnchor.constraint(equalTo: followingLabel.bottomAnchor, constant: padding),
+        bioLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+        bioLabel.heightAnchor.constraint(equalToConstant: 60)
+        
+        
+        ])
+        
     }
 
 }

@@ -11,7 +11,6 @@ import UIKit
 class AvatarImageView: UIImageView {
     let avatarPlaceholderImage = UIImage(named: "avatar-placeholder")
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureAvatarImageView()

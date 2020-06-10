@@ -6,4 +6,10 @@
 //  Copyright © 2020 chandrasekhar yadavally. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIViewController {
+   func addSubviews(views: UIView...) {
+      views.forEach(view.addSubview)
+    }
+}

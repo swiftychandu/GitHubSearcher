@@ -21,7 +21,7 @@ class RepoCountLabel: UILabel {
     
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
-        textAlignment = .left
+        textAlignment = .right
         textColor = .label
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.90

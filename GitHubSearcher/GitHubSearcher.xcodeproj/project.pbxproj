@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2130477F24910A780018FBC2 /* RepoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2130477E24910A780018FBC2 /* RepoTableViewController.swift */; };
+		2130478124910B0B0018FBC2 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2130478024910B0B0018FBC2 /* RepoTableViewCell.swift */; };
 		21839681249004FE00707F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21839680249004FE00707F90 /* AppDelegate.swift */; };
 		21839683249004FE00707F90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21839682249004FE00707F90 /* SceneDelegate.swift */; };
 		21839685249004FE00707F90 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21839684249004FE00707F90 /* SearchViewController.swift */; };
@@ -16,9 +18,19 @@
 		218396972490231500707F90 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218396962490231500707F90 /* NetworkService.swift */; };
 		21839699249024F500707F90 /* GHError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21839698249024F500707F90 /* GHError.swift */; };
 		2183969B249025A200707F90 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2183969A249025A200707F90 /* User.swift */; };
+		2183969D2490412000707F90 /* SearchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2183969C2490412000707F90 /* SearchData.swift */; };
+		2183969F249046A300707F90 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2183969E249046A300707F90 /* AvatarImageView.swift */; };
+		218396A12490489800707F90 /* UsernameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218396A02490489800707F90 /* UsernameLabel.swift */; };
+		218396A32490496000707F90 /* RepoCountLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218396A22490496000707F90 /* RepoCountLabel.swift */; };
+		218396A6249089C500707F90 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218396A5249089C500707F90 /* UserInfoViewController.swift */; };
+		218396A824908F1000707F90 /* UserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218396A724908F1000707F90 /* UserInfoHeaderVC.swift */; };
+		218396AA2490902300707F90 /* BodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218396A92490902300707F90 /* BodyLabel.swift */; };
+		218396AD249090EB00707F90 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218396AC249090EB00707F90 /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2130477E24910A780018FBC2 /* RepoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewController.swift; sourceTree = "<group>"; };
+		2130478024910B0B0018FBC2 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		2183967D249004FE00707F90 /* GitHubSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21839680249004FE00707F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21839682249004FE00707F90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +42,14 @@
 		218396962490231500707F90 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		21839698249024F500707F90 /* GHError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHError.swift; sourceTree = "<group>"; };
 		2183969A249025A200707F90 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2183969C2490412000707F90 /* SearchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchData.swift; sourceTree = "<group>"; };
+		2183969E249046A300707F90 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
+		218396A02490489800707F90 /* UsernameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameLabel.swift; sourceTree = "<group>"; };
+		218396A22490496000707F90 /* RepoCountLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCountLabel.swift; sourceTree = "<group>"; };
+		218396A5249089C500707F90 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		218396A724908F1000707F90 /* UserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoHeaderVC.swift; sourceTree = "<group>"; };
+		218396A92490902300707F90 /* BodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyLabel.swift; sourceTree = "<group>"; };
+		218396AC249090EB00707F90 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,14 +86,40 @@
 				21839682249004FE00707F90 /* SceneDelegate.swift */,
 				21839698249024F500707F90 /* GHError.swift */,
 				2183969A249025A200707F90 /* User.swift */,
-				21839684249004FE00707F90 /* SearchViewController.swift */,
+				2183969C2490412000707F90 /* SearchData.swift */,
+				218396AB2490909800707F90 /* ViewControllers */,
+				218396A4249049DD00707F90 /* Views */,
 				218396962490231500707F90 /* NetworkService.swift */,
-				2183969424901F6500707F90 /* UserCell.swift */,
+				218396AC249090EB00707F90 /* UIViewController+Ext.swift */,
 				21839689249004FF00707F90 /* Assets.xcassets */,
 				2183968B249004FF00707F90 /* LaunchScreen.storyboard */,
 				2183968E249004FF00707F90 /* Info.plist */,
 			);
 			path = GitHubSearcher;
+			sourceTree = "<group>";
+		};
+		218396A4249049DD00707F90 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2183969E249046A300707F90 /* AvatarImageView.swift */,
+				218396A02490489800707F90 /* UsernameLabel.swift */,
+				218396A22490496000707F90 /* RepoCountLabel.swift */,
+				218396A92490902300707F90 /* BodyLabel.swift */,
+				2183969424901F6500707F90 /* UserCell.swift */,
+				2130478024910B0B0018FBC2 /* RepoTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		218396AB2490909800707F90 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				21839684249004FE00707F90 /* SearchViewController.swift */,
+				218396A5249089C500707F90 /* UserInfoViewController.swift */,
+				218396A724908F1000707F90 /* UserInfoHeaderVC.swift */,
+				2130477E24910A780018FBC2 /* RepoTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,13 +192,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218396A824908F1000707F90 /* UserInfoHeaderVC.swift in Sources */,
+				2130478124910B0B0018FBC2 /* RepoTableViewCell.swift in Sources */,
+				2183969F249046A300707F90 /* AvatarImageView.swift in Sources */,
+				218396AD249090EB00707F90 /* UIViewController+Ext.swift in Sources */,
+				218396A6249089C500707F90 /* UserInfoViewController.swift in Sources */,
+				2183969D2490412000707F90 /* SearchData.swift in Sources */,
+				2130477F24910A780018FBC2 /* RepoTableViewController.swift in Sources */,
 				218396972490231500707F90 /* NetworkService.swift in Sources */,
 				2183969524901F6500707F90 /* UserCell.swift in Sources */,
 				21839685249004FE00707F90 /* SearchViewController.swift in Sources */,
 				21839681249004FE00707F90 /* AppDelegate.swift in Sources */,
+				218396AA2490902300707F90 /* BodyLabel.swift in Sources */,
+				218396A12490489800707F90 /* UsernameLabel.swift in Sources */,
 				21839699249024F500707F90 /* GHError.swift in Sources */,
 				21839683249004FE00707F90 /* SceneDelegate.swift in Sources */,
 				2183969B249025A200707F90 /* User.swift in Sources */,
+				218396A32490496000707F90 /* RepoCountLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
