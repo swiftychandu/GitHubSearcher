@@ -32,7 +32,7 @@ class UserInfoHeaderVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        add(childVC: RepoTableViewController(), to: footerView)
+        add(childVC: UINavigationController(rootViewController: RepoTableViewController()), to: footerView)
     }
     
     func add(childVC: UIViewController, to containerView: UIView) {
@@ -44,7 +44,7 @@ class UserInfoHeaderVC: UIViewController {
     
     private func setupUI() {
     addSubviews(views: avatartImageView,usernameLabel,emailLabel,locationLabel,
-                joinDateLabel,followerslabel,followingLabel,bioLabel, footerView)
+                joinDateLabel,followerslabel,followingLabel,bioLabel,footerView)
         footerView.translatesAutoresizingMaskIntoConstraints = false
         usernameLabel.text = "This is Username Label"
         emailLabel.text = "This is Email Label"

@@ -14,8 +14,16 @@ class RepoTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        configureTableView()
-        
+       configureSearchController()
     }
+    
+    private func configureSearchController() {
+          let searchController = UISearchController()
+          searchController.searchResultsUpdater = self
+          searchController.searchBar.placeholder = "Search for user's repositories"
+          searchController.obscuresBackgroundDuringPresentation = false
+          navigationItem.searchController = searchController
+      }
     
     private func configureTableView() {
           view.addSubview(tableView)
@@ -45,6 +53,12 @@ extension RepoTableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RepoTableViewCell.self), for: indexPath)
         return cell
+    }
+}
+
+extension RepoTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        
     }
     
     

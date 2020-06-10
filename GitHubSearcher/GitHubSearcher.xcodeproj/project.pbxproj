@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2130477F24910A780018FBC2 /* RepoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2130477E24910A780018FBC2 /* RepoTableViewController.swift */; };
 		2130478124910B0B0018FBC2 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2130478024910B0B0018FBC2 /* RepoTableViewCell.swift */; };
+		21304783249128EA0018FBC2 /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21304782249128EA0018FBC2 /* String + Ext.swift */; };
+		21304785249128FF0018FBC2 /* Date + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21304784249128FF0018FBC2 /* Date + Ext.swift */; };
 		21839681249004FE00707F90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21839680249004FE00707F90 /* AppDelegate.swift */; };
 		21839683249004FE00707F90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21839682249004FE00707F90 /* SceneDelegate.swift */; };
 		21839685249004FE00707F90 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21839684249004FE00707F90 /* SearchViewController.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		2130477E24910A780018FBC2 /* RepoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewController.swift; sourceTree = "<group>"; };
 		2130478024910B0B0018FBC2 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		21304782249128EA0018FBC2 /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
+		21304784249128FF0018FBC2 /* Date + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Ext.swift"; sourceTree = "<group>"; };
 		2183967D249004FE00707F90 /* GitHubSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21839680249004FE00707F90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21839682249004FE00707F90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21304786249129090018FBC2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				218396AC249090EB00707F90 /* UIViewController+Ext.swift */,
+				21304782249128EA0018FBC2 /* String + Ext.swift */,
+				21304784249128FF0018FBC2 /* Date + Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		21839674249004FE00707F90 = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +104,7 @@
 				218396AB2490909800707F90 /* ViewControllers */,
 				218396A4249049DD00707F90 /* Views */,
 				218396962490231500707F90 /* NetworkService.swift */,
-				218396AC249090EB00707F90 /* UIViewController+Ext.swift */,
+				21304786249129090018FBC2 /* Extensions */,
 				21839689249004FF00707F90 /* Assets.xcassets */,
 				2183968B249004FF00707F90 /* LaunchScreen.storyboard */,
 				2183968E249004FF00707F90 /* Info.plist */,
@@ -192,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21304783249128EA0018FBC2 /* String + Ext.swift in Sources */,
 				218396A824908F1000707F90 /* UserInfoHeaderVC.swift in Sources */,
 				2130478124910B0B0018FBC2 /* RepoTableViewCell.swift in Sources */,
 				2183969F249046A300707F90 /* AvatarImageView.swift in Sources */,
@@ -204,6 +219,7 @@
 				21839685249004FE00707F90 /* SearchViewController.swift in Sources */,
 				21839681249004FE00707F90 /* AppDelegate.swift in Sources */,
 				218396AA2490902300707F90 /* BodyLabel.swift in Sources */,
+				21304785249128FF0018FBC2 /* Date + Ext.swift in Sources */,
 				218396A12490489800707F90 /* UsernameLabel.swift in Sources */,
 				21839699249024F500707F90 /* GHError.swift in Sources */,
 				21839683249004FE00707F90 /* SceneDelegate.swift in Sources */,
