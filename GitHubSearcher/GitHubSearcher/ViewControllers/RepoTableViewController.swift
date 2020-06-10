@@ -13,7 +13,7 @@ class RepoTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       configureTableView()
         
     }
     

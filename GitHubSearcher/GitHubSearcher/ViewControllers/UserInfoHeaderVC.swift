@@ -17,20 +17,39 @@ class UserInfoHeaderVC: UIViewController {
     let followerslabel = UsernameLabel()
     let followingLabel = UsernameLabel()
     let bioLabel = BodyLabel()
-    var user: User!
+    let footerView = UIView()
+//    var user: User!
         
+//    init(user: User) {
+//        super.init(nibName: nil, bundle: nil)
+//        self.user = user
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        add(childVC: RepoTableViewController(), to: footerView)
     }
+    
+    func add(childVC: UIViewController, to containerView: UIView) {
+           addChild(childVC)
+           containerView.addSubview(childVC.view)
+           childVC.view.frame = containerView.bounds
+           childVC.didMove(toParent: self)
+       }
     
     private func setupUI() {
     addSubviews(views: avatartImageView,usernameLabel,emailLabel,locationLabel,
-                joinDateLabel,followerslabel,followingLabel,bioLabel)
+                joinDateLabel,followerslabel,followingLabel,bioLabel, footerView)
+        footerView.translatesAutoresizingMaskIntoConstraints = false
         usernameLabel.text = "This is Username Label"
         emailLabel.text = "This is Email Label"
-        locationLabel.text = "This is Email Label"
-        joinDateLabel.text = "This is Join Data Label"
+        locationLabel.text = "This is Location Label"
+        joinDateLabel.text = "This is Join Date Label"
         followerslabel.text = "This is Followers Label"
         followingLabel.text = "This is Following Label"
         bioLabel.text = "This is Bio Label"
@@ -77,7 +96,12 @@ class UserInfoHeaderVC: UIViewController {
         bioLabel.leadingAnchor.constraint(equalTo: avatartImageView.leadingAnchor),
         bioLabel.topAnchor.constraint(equalTo: followingLabel.bottomAnchor, constant: padding),
         bioLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-        bioLabel.heightAnchor.constraint(equalToConstant: 60)
+        bioLabel.heightAnchor.constraint(equalToConstant: 60),
+        
+        footerView.topAnchor.constraint(equalTo: bioLabel.bottomAnchor),
+        footerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+        footerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+        footerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         
         
         ])
