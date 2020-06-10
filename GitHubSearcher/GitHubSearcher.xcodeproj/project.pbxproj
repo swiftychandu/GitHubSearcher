@@ -24,7 +24,6 @@
 		2183969F249046A300707F90 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2183969E249046A300707F90 /* AvatarImageView.swift */; };
 		218396A12490489800707F90 /* UsernameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218396A02490489800707F90 /* UsernameLabel.swift */; };
 		218396A32490496000707F90 /* RepoCountLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218396A22490496000707F90 /* RepoCountLabel.swift */; };
-		218396A6249089C500707F90 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218396A5249089C500707F90 /* UserInfoViewController.swift */; };
 		218396A824908F1000707F90 /* UserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218396A724908F1000707F90 /* UserInfoHeaderVC.swift */; };
 		218396AA2490902300707F90 /* BodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218396A92490902300707F90 /* BodyLabel.swift */; };
 		218396AD249090EB00707F90 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218396AC249090EB00707F90 /* UIViewController+Ext.swift */; };
@@ -50,7 +49,6 @@
 		2183969E249046A300707F90 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		218396A02490489800707F90 /* UsernameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameLabel.swift; sourceTree = "<group>"; };
 		218396A22490496000707F90 /* RepoCountLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCountLabel.swift; sourceTree = "<group>"; };
-		218396A5249089C500707F90 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		218396A724908F1000707F90 /* UserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		218396A92490902300707F90 /* BodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyLabel.swift; sourceTree = "<group>"; };
 		218396AC249090EB00707F90 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				21839684249004FE00707F90 /* SearchViewController.swift */,
-				218396A5249089C500707F90 /* UserInfoViewController.swift */,
 				218396A724908F1000707F90 /* UserInfoHeaderVC.swift */,
 				2130477E24910A780018FBC2 /* RepoTableViewController.swift */,
 			);
@@ -211,7 +208,6 @@
 				2130478124910B0B0018FBC2 /* RepoTableViewCell.swift in Sources */,
 				2183969F249046A300707F90 /* AvatarImageView.swift in Sources */,
 				218396AD249090EB00707F90 /* UIViewController+Ext.swift in Sources */,
-				218396A6249089C500707F90 /* UserInfoViewController.swift in Sources */,
 				2183969D2490412000707F90 /* SearchData.swift in Sources */,
 				2130477F24910A780018FBC2 /* RepoTableViewController.swift in Sources */,
 				218396972490231500707F90 /* NetworkService.swift in Sources */,

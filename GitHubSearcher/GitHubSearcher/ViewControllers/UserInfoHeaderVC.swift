@@ -36,6 +36,7 @@ class UserInfoHeaderVC: UIViewController {
         super.viewDidLoad()
         setupUI()
         add(childVC: UINavigationController(rootViewController: RepoTableViewController(repos: self.repos)), to: footerView)
+       
     }
     
     func add(childVC: UIViewController, to containerView: UIView) {
@@ -52,7 +53,7 @@ class UserInfoHeaderVC: UIViewController {
         usernameLabel.text = userDetails.login
         emailLabel.text = userDetails.email
         locationLabel.text = userDetails.location
-        joinDateLabel.text = userDetails.joinDate
+        joinDateLabel.text = userDetails.joinDate.convertToDisplayFormat()
         followerslabel.text = "\(userDetails.followers) Followers"
         followingLabel.text = "Following \(userDetails.following)"
         bioLabel.text = userDetails.bio
